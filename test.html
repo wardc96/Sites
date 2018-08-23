@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--->
+<style>
+
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+
+
+/* Custom default button */
+/**.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` *
+  background-color: #fff;
+  border: .05rem solid #fff;
+}**/
+
+
+/*
+ * Base structure
+ */
+
+/**html,
+body {
+  height: 100vh;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("cover1.jpg");
+} **/
+
+
+.box{
+  background-image: url("cover1.jpg");
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  padding: 100px;
+    perspective: 1px;
+  transform-style: preserve-3d;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+.scroll-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mouse {
+  max-width: 2.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.scroll {
+	animation-name: scroll;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+	animation-iteration-count: infinite;
+	transform-origin: 50% 20.5px;
+	will-change: transform;
+}
+
+@keyframes scroll {
+
+	0%, 20% {
+		transform: translateY(0) scaleY(1);
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(36px) scaleY(2);
+		opacity: 0.01;
+	}
+
+}
+
+body {
+  //display: -ms-flexbox;
+  //display: flex;
+ // color: #fff;
+  
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  //color: #777;
+ 
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .box {
+  position: relative;
+  //opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+.bgimg-1 {
+ background-color: #333; // background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4) ), url("coford/banner1.jpg");
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  
+}
+
+/* .bgimg-1 a,
+a:focus,
+a:hover {
+  color: #fff;
+} */
+
+.bgimg-2 {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("cover1.jpg");
+  min-height: 300px;
+
+}
+
+.bgimg-3 {
+  background-image: url("coford/banner1.jpg");
+  min-height: 300px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 40px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
+
+/* Turn off parallax scrolling for tablets and phones *
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+**/
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  color: #5a5a5a;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  //margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+  margin-top: 10px;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * Spring
+   */
+.hamburger--spring .hamburger-inner {
+  top: 5px;
+  transition: background-color 0s 0.13s linear; }
+  .hamburger--spring .hamburger-inner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger--spring .hamburger-inner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--spring.is-active .hamburger-inner {
+  transition-delay: 0.22s;
+  background-color: transparent; }
+  .hamburger--spring.is-active .hamburger-inner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--spring.is-active .hamburger-inner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg); }
+	
+	
+	
+	
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+  animation: fade-in 1.3s;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.doormat {
+	//max-width:31%;
+position: relative;
+	display:inline-flex;
+	
+
+}
+
+@media (min-width: 768px) {
+	.doormat{
+		max-width: 31%;
+			margin:6px;
+
+	}
+}
+
+
+@media (max-width: 767px) and (min-width:576px) {
+	
+	.doormat {
+		max-width: 47%;
+		margin: 6px;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 575px) {
+	
+	.doormat {
+	min-width: 92%;
+	margin-bottom: 20px;
+	margin-left:15px;
+	margin-right:15px;
+	}
+}
+
+.show-text {
+	transition: .5s ease;
+  	opacity: 0;
+    position: absolute;
+    top: 0;
+   // bottom:25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+
+.card-text {
+  color: white;
+  font-size: 1rem;
+}
+
+.card-title {
+	transition: .5s ease;
+	  //right: 0;
+  //bottom: ;
+  left: 50;
+ // padding: 1.25rem;
+}
+
+.card-img {
+	  //opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.doormat:hover .card-img {
+  opacity: 0.7;
+}
+
+.doormat:hover .show-text {
+  opacity: 1;
+}
+
+.doormat:hover .card-title {
+	opacity:0;
+	
+}
+
+
+</style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="cover.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	(function ($) {
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".navbar").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 75) {
+                $('.navbar').fadeIn();
+            } else {
+                $('.navbar').fadeOut();
+            }
+        });
+    });
+
+});
+  }(jQuery));
+  
+
+(function ($) {
+  $(document).ready(function(){
+
+
+    // fade in .scroll-link
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 550) {
+                $('.scroll-link').fadeOut();
+            } else {
+                $('.scroll-link').fadeIn();
+            }
+        });
+    });
+
+});
+  }(jQuery)); 
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (1100) specifies the number of milliseconds it takes to scroll to the specified area, the (-130) is a 130px offset from the anchor.
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top -130
+      }, 1100, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash;
+      });
+    } // End if
+  });
+});
+
+var animateHTML = function () {
+  var elems,
+    windowHeight
+  var init = function () {
+    elems = document.getElementsByClassName('hidden')
+    windowHeight = window.innerHeight
+    _addEventHandlers()
+  }
+  var _addEventHandlers = function () {
+    window.addEventListener('scroll', _checkPosition)
+    window.addEventListener('resize', init)
+  }
+  var _checkPosition = function () {
+    for (var i = 0; i < elems.length; i++) {
+      var posFromTop = elems[i].getBoundingClientRect().top
+      if (posFromTop - windowHeight <= -250) {
+        elems[i].className = elems[i].className.replace('hidden', 'animated bounceInUp')
+      }
+    }
+  }
+  return {
+    init: init
+  }
+}
+animateHTML().init()
+
+
+</script>
+
+	
+	
+</head>
+<body>
+
+<div class="bgimg-1 text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+        <!--<h3 class="masthead-brand">Coford</h3>-->
+		<!-- <a href="#"><img class="masthead-brand" src="http://www.ucd.ie/ferg/Research/Projects/BOGFOR/Images/COFORDlogo.gif" alt="Coford Logo"></a> -->
+		  <div class="border p-5 bg-danger inline" style="width:150px;height:70px;"></div>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#test">About</a>
+            <a class="nav-link" href="index.html">Contact</a>
+          </nav>
+        </div>
+		
+		
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-top-coford border-bottom text-left " style="text-shadow: none;">
+
+		<!-- <a href="#"><img class="navbar-brand" src="http://www.ucd.ie/ferg/Research/Projects/BOGFOR/Images/COFORDlogo.gif" alt="Coford Logo"></a> -->
+		<div class="border p-5 bg-danger" style="width:150px;height:70px;"></div>
+        <button class="hamburger hamburger--spring d-lg-none" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+		</span>
+		</button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item py-lg-3">
+              <a class="nav-link  active border-bottom border-success" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item py-lg-3">
+              <a class="nav-link" href="parallax.html">About</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">Tools & Services</a>
+            </li>
+            <li class="nav-item py-lg-3">
+              <a class="nav-link" href="coford-home.html/">Events and Presentations</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">Publications</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">Research Programme</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">Links</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">News</a>
+            </li>
+
+          </ul>
+          <form class="form-inline mt-1 mt-md-2">
+            <input class="form-control mr-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-1 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+		
+		
+		
+		
+      </header>
+
+      <main role="main" class="inner cover" style="margin-top: 16vh;">
+        <h1 class="cover-heading">WARD</h1>
+		
+        <p class="lead">Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages </p>
+       
+
+		
+		<a class="scroll-link" href="#content">
+		<svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">
+		 <g fill="none" fill-rule="evenodd">
+			<rect width="70" height="118" x="1.5" y="1.5" stroke="#f5f5f5" stroke-width="3" rx="36"/>
+			<circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#f5f5f5"/>
+		</g>
+	    </svg>
+	    </a>
+		
+		
+      </main>
+	
+
+     
+    </div>
+	
+	
+	
+
+</div> <!--##End of large Home Image##-->
+
+<div class="content" style="color: #black;background-color:white;text-align:center;text-align: justify;" id="content">
+ <div class="container">
+
+  
+		<!--- Recent News Content Card --->
+		
+		<div class="card border-rounded shadow mb-5 mt-5" style="width: 100%;" id="card">
+		<div class="card-header" style=" background: linear-gradient(to right, #046138 17%, #009933 132%); color: #fff;"><h3> Recent News</h3></div>
+  <div class="card-body">
+  <img class="img-fluid float-right d-none d-lg-block" src="coford/forestnews.jpg" style="width:250px">
+    <ul class="list-group list-group-flush" >
+  <li class="list-group-item"><a href="#">01.12.2017 Testing github Pages Testing github Pages Testing github Pages</li></a>
+  <li class="list-group-item"><a href="#">28.11.2017 Testing github Pages Testing github Pages Testing github Pages</li></a>
+  <li class="list-group-item"><a href="#">29.09.2017 Testing github Pages Testing github Pages Testing github Pages</li></a>
+  <li class="list-group-item"><a href="#">18.09.2017 Testing github Pages Testing github Pages Testing github Pages</li></a>
+  <li class="list-group-item"><a href="#">04.09.2017 Testing github Pages Testing github Pages Testing github Pages</li></a>
+  </ul>
+<br>
+  <p><a class="btn btn-lg btn-coford" href="#" role="button">More news stories &raquo;</a></p>
+  </div>
+</div>
+
+<!-- <hr>
+
+<br>
+
+
+<h2>Coford</h2>
+<p>The COFORD Council for Forest Research and Development is a representative body from the Forest Sector in Ireland. The Council advises the Department of Agriculture Food and the Marine on research and developmental issues.
+
+Forest Sector Development/COFORD Division provides the secretarial and technical support to the Council and is responsible for COFORD publications and management tools.
+
+ </p> -->
+ 
+ 
+<!--  <form action="contact_us.jsp" method="post" name="contact_us"><input id="submitted" name="submitted" type="hidden" value="1" />
+ <div class="form-row">
+ <div class="form-group col-md-6">
+    <label for="name">Full Name</label>
+    <input type="text" class="form-control textinput" id="name" placeholder="Full Name">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="email_add">Email address</label>
+    <input type="email" class="form-control" id="email_add" placeholder="name@example.com">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="enquiry">Enquiry</label>
+    <textarea class="form-control" id="enquiry" rows="3"></textarea>
+  </div>
+  <input title=" Continue " alt="Continue" src="/media/coford/styleassets/images/button_send1.gif" type="image" />
+  </div>
+  
+  
+  
+  </form> -->
+ 
+ 
+
+   
+    
+	  
+	     
+		   
+		   
+
+
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+         <div class="row featurette hidden">
+          <div class="col-md-7">
+           <h2 class="featurette-heading"><a href="#">Testing github Pages</a></h2>
+            <p class="lead">Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github Pages Testing github PagesTesting github Pages Testing github Pages Testing github Pages</p>
+         
+<a class="btn btn-lg btn-coford float-right mb-1 shadow-sm" href="/toolsservices/" role="button">Learn more</a>		 </div>
+          <div class="col-md-5">
+         <a href="#"> <img class="featurette-image img-fluid mx-auto rounded" src="https://parks.state.wa.us/ImageRepository/Document?documentID=10716" alt="COFORD Council"></a>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette hidden" id="test">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Testing github Pages</h2>
+            <p class="lead">Testing github Pages Testing github Pages Testing github PagesTesting github Pages Testing github Pages Testing github PagesTesting github Pages Testing github Pages Testing github Pages</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <a href="#"><img class="featurette-image rounded img-fluid mx-auto" src="https://parks.state.wa.us/ImageRepository/Document?documentID=10716" alt="COFORD Logo"></a>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette hidden">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">RTesting github Pages</h2>
+            <p class="lead">Testing github Pages Testing github Pages Testing github PagesTesting github Pages Testing github Pages Testing github PagesTesting github Pages Testing github Pages Testing github Pages</p>
+          </div>
+          <div class="col-md-5">
+            <a href="#"><img class="featurette-image img-fluid mx-auto" src="https://parks.state.wa.us/ImageRepository/Document?documentID=10716" alt="DAFM Logo"></a>
+          </div>
+        </div>
+
+<hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+</div>
+
+
+
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:35px;color: #f7f7f7;">WARD</span>
+  </div>
+</div>
+
+
+<!-- <div class="bgimg-1 mh-25">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div> -->
+
+<!-- FOOTER -->
+      <footer class="container">
+        <hr class="featurette-divider">
+        <ul class="float-right">
+        <li><i class="fas fa-address-book"></i> Contact Us: <br><p>Testing github Pages<br>Testing github Pages<br>Testing github Pages<br>
+      Testing github Pages<br>Testing github Pages<br> Dublin 2</p></li>
+    <li><i class="fas fa-envelope"></i> Email: <a href="Testing github Pages">Testing github Pages</a></li>
+		<li><i class="fas fa-mobile"></i> Phone:  <a href="Testing github Pages">Testing github Pages</a></li><br>
+        </ul>
+
+        <p> <a href="Testing github Pages">&copy; 2017-2018 WARD</a> &middot; Newsletter</p>
+		
+	
+    <p>Get the latest update from us by subscribing to our newsletter.</p>
+		<form class="form-inline">
+  <div class="form-group  mb-2">
+    <input type="email" class="form-control" id="email1" placeholder="name@example.com">
+  </div>
+  <button type="submit" class="btn btn-coford mb-2" data-toggle="tooltip" data-placement="top" title="This button will subscribe you to our newsletter">Subscribe</button>
+</form>
+      </footer>
+
+	  
+	  
+	  
+	  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	  
+<script>
+//This function adds the active class to the current navbar link
+$(function(){
+    var current = location.pathname;
+    $('.navbar li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active border-bottom border-success');
+        }
+    })
+})
+</script>
+<script>
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // Menu opens throughb data-target tag but adds animation thorugh this function
+  });
+</script>  
+</body>
+</html>
