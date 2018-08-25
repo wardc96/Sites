@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+	<link rel="stylesheet" href="agriappeals/bootstrap/css/hover.css">
+	<link href="coford/bootstrap/css/animate.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+	<script>
+	(function ($) {
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".navbar").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 75) {
+                $('.navbar').fadeIn();
+            } else {
+                $('.navbar').fadeOut();
+            }
+        });
+    });
+
+});
+  }(jQuery));
+  
+
+(function ($) {
+  $(document).ready(function(){
+
+
+    // fade in .scroll-link
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 550) {
+                $('.scroll-link').fadeOut();
+            } else {
+                $('.scroll-link').fadeIn();
+            }
+        });
+    });
+
+});
+  }(jQuery)); 
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (1100) specifies the number of milliseconds it takes to scroll to the specified area, the (-130) is a 130px offset from the anchor.
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top -130
+      }, 1100, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash;
+      });
+    } // End if
+  });
+});
+
+var animateHTML = function () {
+  var elems,
+    windowHeight
+  var init = function () {
+    elems = document.getElementsByClassName('hidden')
+    windowHeight = window.innerHeight
+    _addEventHandlers()
+  }
+  var _addEventHandlers = function () {
+    window.addEventListener('scroll', _checkPosition)
+    window.addEventListener('resize', init)
+  }
+  var _checkPosition = function () {
+    for (var i = 0; i < elems.length; i++) {
+      var posFromTop = elems[i].getBoundingClientRect().top
+      if (posFromTop - windowHeight <= -250) {
+        elems[i].className = elems[i].className.replace('hidden', 'animated bounceInUp')
+      }
+    }
+  }
+  return {
+    init: init
+  }
+}
+animateHTML().init()
+
+
+</script>
+
+	
+	
+</head>
+<body>
+
+<div class="bgimg-1 text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+        <!--<h3 class="masthead-brand">Coford</h3>-->
+		<a href="#"><img class="masthead-brand" src="logo.png" alt="Coford Logo" style="height:72px;"></a>
+		  
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#test">About</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+		
+		
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-top-coford border-bottom text-left " style="text-shadow: none;">
+
+		<a href="#"><img class="navbar-brand" src="logo.png" alt="Coford Logo" style="height:72px;"></a>
+        <button class="hamburger hamburger--spring d-lg-none" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+		</span>
+		</button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item py-lg-3">
+              <a class="nav-link  active border-bottom border-success" href="coford-home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item py-lg-3">
+              <a class="nav-link" href="parallax.html">About</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">Tools & Services</a>
+            </li>
+			<li class="nav-item py-lg-3">
+              <a class="nav-link" href="#">News</a>
+            </li>
+
+          </ul>
+          <form class="form-inline mt-1 mt-md-2">
+            <input class="form-control mr-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-1 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+		
+		
+		
+		
+      </header>
+
+      <main role="main" class="inner cover" style="margin-top: 16vh;">
+        <h1 class="cover-heading">PROJECT</h1>
+		
+        <p class="lead">Sample Cover page for Project</p>
+
+		
+		<a class="scroll-link" href="#content">
+		<svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">
+		 <g fill="none" fill-rule="evenodd">
+			<rect width="70" height="118" x="1.5" y="1.5" stroke="#f5f5f5" stroke-width="3" rx="36"/>
+			<circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#f5f5f5"/>
+		</g>
+	    </svg>
+	    </a>
+		
+		
+      </main>
+	
+
+     
+    </div>
+	
+	
+	
+
+</div> <!--##End of large Home Image##-->
+
+<div class="content" style="color: #black;background-color:white;text-align:center;text-align: justify;" id="content">
+ <div class="container">
+
+  
+		<!--- Recent News Content Card --->
+		
+		<div class="card border-rounded shadow mb-5 mt-5" style="width: 100%;" id="card">
+		<div class="card-header" style=" background: linear-gradient(to right, #046138 17%, #009933 132%); color: #fff;"><h3> Recent News</h3></div>
+  <div class="card-body">
+  <img class="img-fluid float-right d-none d-lg-block" src="coford/forestnews.jpg" style="width:250px">
+    <ul class="list-group list-group-flush" >
+  <li class="list-group-item"><a href="#">01.12.2017 Woodflow and forest-based biomass energy use on the island of Ireland (2016)</li></a>
+  <li class="list-group-item"><a href="#">28.11.2017 Wood Price Quarterly (WPQ) - Private Average Roundwood Prices Received by Private Growers</li></a>
+  <li class="list-group-item"><a href="#">29.09.2017 Open letter from Director Marc Palahí, of the European Forest Institute. Forestry combating climate change: an inconvenient truth?</li></a>
+  <li class="list-group-item"><a href="#">18.09.2017 Growing the Irish Forest Bioeconomy</li></a>
+  <li class="list-group-item"><a href="#">04.09.2017 COFORD Council Activities Report 2016</li></a>
+  </ul>
+<br>
+  <p><a class="btn btn-lg btn-success" href="#" role="button">More news stories &raquo;</a></p>
+  </div>
+</div>
+
+<!-- <hr>
+
+<br>
+
+
+<h2>Coford</h2>
+<p>The COFORD Council for Forest Research and Development is a representative body from the Forest Sector in Ireland. The Council advises the Department of Agriculture Food and the Marine on research and developmental issues.
+
+Forest Sector Development/COFORD Division provides the secretarial and technical support to the Council and is responsible for COFORD publications and management tools.
+
+ </p> -->
+ 
+ 
+<!--  <form action="contact_us.jsp" method="post" name="contact_us"><input id="submitted" name="submitted" type="hidden" value="1" />
+ <div class="form-row">
+ <div class="form-group col-md-6">
+    <label for="name">Full Name</label>
+    <input type="text" class="form-control textinput" id="name" placeholder="Full Name">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="email_add">Email address</label>
+    <input type="email" class="form-control" id="email_add" placeholder="name@example.com">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="enquiry">Enquiry</label>
+    <textarea class="form-control" id="enquiry" rows="3"></textarea>
+  </div>
+  <input title=" Continue " alt="Continue" src="/media/coford/styleassets/images/button_send1.gif" type="image" />
+  </div>
+  
+  
+  
+  </form> -->
+ 
+ 
+
+   
+    
+	  
+	     
+		   
+		   
+
+
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+         <div class="row featurette">
+          <div class="col-md-7">
+           <h2 class="featurette-heading"><a href="#">COFORD Council</a></h2>
+            <p class="lead">The COFORD Council for Forest Research and Development is a representative body from the Forest Sector in Ireland.  The Council advises the Department of Agriculture Food and the Marine on research and developmental issues.</p>
+         
+<a class="btn btn-lg btn-success float-right mb-1 shadow-sm" href="/toolsservices/" role="button">Learn more</a>		 </div>
+          <div class="col-md-5">
+         <a href="#"> <img class="featurette-image img-fluid mx-auto rounded shadow" src="featurette.jpg" alt="COFORD Council"></a>
+          </div>
+        </div>
+          </div>
+
+
+        <hr class="featurette-divider">
+
+        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <div class="row featurette" id="test">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Tools and Services</h2>
+            <p class="lead">COFORD organises a variety of events each year, including workshops, seminars and conferences. Some of these are co-hosted with other organisations.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <a href="#"><img class="featurette-image rounded img-fluid mx-auto" src="featurette.jpg" alt="COFORD Logo"></a>
+          </div>
+        </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Research Programme</h2>
+            <p class="lead">The COFORD research programme is the responsibility of the Research, Food and CODEX Co-ordination Division of the Department of Agriculture, Food and the Marine.</p>
+          </div>
+          <div class="col-md-5">
+            <a href="#"><img class="featurette-image img-fluid mx-auto" src="featurette.jpg" alt="DAFM Logo"></a>
+          </div>
+        </div>
+        </div>
+
+<hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+</div>
+
+
+
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:35px;color: #f7f7f7;">PROJECT</span>
+  </div>
+</div>
+
+
+<!-- <div class="bgimg-1 mh-25">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div> -->
+
+<!-- FOOTER -->
+      <footer class="container">
+        <hr class="featurette-divider">
+        <ul class="float-right">
+        <li><i class="fas fa-address-book"></i> Contact Us: <br><p>Project Test<br>Project Test<br> Ag House,<br>
+      3 West,<br>Kildare Street,<br> Dublin 2</p></li>
+    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:fsd@agriculture.gov.ie"></a></li>
+		<li><i class="fas fa-mobile"></i> Phone:  <a href="tel:01-6072487">+353 (0)123456</a></li><br>
+        </ul>
+
+        <p> <a href="https://www.agriculture.gov.ie/legalnotices/copyright/">&copy; 2017-2018 PROJECT</a> &middot; Newsletter</p>
+		
+	
+    <p>Get the latest update from us by subscribing to our newsletter.</p>
+		<form class="form-inline">
+  <div class="form-group  mb-2">
+    <input type="email" class="form-control" id="email1" placeholder="name@example.com">
+  </div>
+  <button type="submit" class="btn btn-success mb-2" data-toggle="tooltip" data-placement="top" title="This button will subscribe you to our newsletter">Subscribe</button>
+</form>
+      </footer>
+
+	  
+	  
+	  
+	  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	  
+<script>
+//This function adds the active class to the current navbar link
+$(function(){
+    var current = location.pathname;
+    $('.navbar li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active border-bottom border-success');
+        }
+    })
+})
+</script>
+<script>
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // Menu opens through data-target tag but adds animation thorugh this function
+  });
+</script>  
+  <script>
+      AOS.init();
+    </script>
+</body>
+</html>
