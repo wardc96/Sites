@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en" id="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Agriculture Appeals Office</title>
+
+    <!-- Bootstrap core CSS -->
+	<!-- <link href="../cover.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+	 
+	<style> 
+	 
+	#cnotif{
+  display: none;
+}
+
+.pcnotif {
+	color: #fff;
+}
+
+.pcnotif a{
+	color: #BABBBD;
+}
+
+.pcnotif a:hover{
+	color: #fff;
+}
+
+
+.top-utils {
+  background: #363636;
+  padding: 15px 0 0 0;
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, .7), 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+  }
+.top-utils a {
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+
+
+.carousel {
+	//margin-bottom: 1rem;
+	margin-top: 0.5rem;
+	overflow: hidden;
+}
+
+.carousel-caption {
+	margin-bottom: 3rem;
+}
+
+
+.active-nav {
+	background-color: #edeff2;
+	border-radius: 5px;	
+	border-bottom: 4px solid #28a745;
+
+}
+
+#nav {
+		font-size: 1rem;
+		width: 100%;
+		word-break: break-word;
+		word-wrap: break-word;
+}
+
+@media only screen and (min-width: 992px) {
+    #nav {	
+	margin-bottom: 20vh;
+	border-right: 1px solid #dee2e6;
+         }
+}
+	
+ #nav .nav-link:hover {
+	background-color: #edeff2;
+	border-radius: 5px;	
+}
+
+ #nav .nav-link {
+	border-radius: 5px;
+	margin-bottom: 2px;
+	//max-width: 95%;
+}
+
+#nav .nav-link a{
+
+	color: black;
+}
+
+
+#nav .nav-link a:hover {
+		text-decoration: none;
+}
+
+.multilevel-linkul-0 {
+	list-style-type: none;
+	float: left;
+	margin-top: 5px;
+}
+
+.multilevel-linkul-0 li a:hover {
+	text-decoration: underline;
+}
+
+.currentbranch0 {
+	font-weight: 600; 
+	display: block;
+}
+
+.nav-top {
+	font-weight: 490;
+	font-size: 1.2rem;
+	padding-bottom: 5px;
+	margin-top: 0.5rem;
+	line-height: 1.5;
+}
+
+.mainbody {
+	margin-bottom: 10rem;
+	margin-top: 1.5rem;
+} 
+
+#textSelector { margin: 0px; padding: 1px; height: 47px; line-height: 43px; vertical-align: middle;position: relative;z-index: 2;}
+#textSelector  a { padding: 1px; margin: 0px;  text-decoration: none; font-weight: normal; border: 2px inset #98bf21; border-radius: 4px;behavior: url(./pie/pie.htc);}
+#textSelector  #normal { background-color:white; color: black; font-size: 1em; /*padding: 7px 2px 0px 2px;*/  }
+#textSelector  #larger{ background-color:white; color: black;font-size: 1.5em; font-weight: bold;}
+#textSelector  #contrast { background-color:black; color: yellow; font-size: 1em; /*padding: 7px 2px 0px 2px;*/  }
+#textSelector ul li a:hover, #textSelector ul li a:active, #textSelector ul li a:focus { text-decoration: underline;}
+
+.navbar-toggler {
+	height: 45px;
+	border: 1px solid grey;
+	margin-left: 4px;
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+
+}
+
+.navbar-toggler span {
+   display: block;
+   background-color: #444;
+   height: 3px;
+   width: 25px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   position: relative;
+   left: 0;
+   opacity: 1;
+}
+
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+   -webkit-transition: transform .3s ease-in-out;
+   -moz-transition: transform .3s ease-in-out;
+   -o-transition: transform .3s ease-in-out;
+   transition: transform .3s ease-in-out;
+   
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: relative;
+    //left: 10px;
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 0.9;
+
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    //visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: relative;
+    //left: 0px;
+    bottom: 12px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    opacity: 0.9;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color:#363636;
+  border-top: 1px solid #dee2e6 !important;
+  color: #9ca299;
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, .5), 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+}
+
+
+footer a {
+	font-size: 16px;
+	color: #BABBBD;
+}
+
+footer a:hover {
+	color: white;
+}
+
+.shade {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) );
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.doormat {
+	//max-width:31%;
+
+	display:inline-block;
+}
+
+@media (min-width: 767px) {
+	.doormat{
+		max-width: 31%;
+			margin:6px;
+	}
+}
+
+
+@media (max-width: 766px) and (min-width:576px) {
+	
+	.doormat {
+		max-width: 47%;
+		margin: 6px;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 575px) {
+	
+	.doormat {
+	width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+
+	
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link><!---Font awesome ICONS CSS--->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+ 
+  
+
+
+  </head>
+  
+<section id="cnotif" class="top-utils cookie fixed-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="pcnotif" style="text-align: center; padding-right: 10px;">By using this website, you 
+
+consent to our use of cookies. 
+                  For more information on cookies see our 
+                  <a href="https://www.agriculture.gov.ie/legalnotices/privacy/">Privacy Policy Page</a>
+                  <span><button id="okbtn" type="submit" class="btn btn-sm btn-success">Close</button></span></p>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
+  <script type="text/javascript" src="<t4 type="media" formatter="path/*" id="68731" />"></script>
+  
+<body class="bg-light">
+
+<div class="container border bg-white shadow-lg rounded-top border-bottom-0 mt-sm-2 xx">
+    <header class="blog-header py-0 bg-white border-bottom">
+	<a class="" href="#"><img id="logo" class="container img-fluid mx-auto d-flex d-md-none" src="http://www.agriappeals.gov.ie/media/agriappeals/styleassets/images/appeals_logo2.jpg" alt="Agriappeals Logo"></a>
+        <div class="row justify-content-between align-items-center">
+		
+		
+          <div class="col-lg-4 pt-1">
+			<a class="blog-header-logo text-dark" href="#"><img id="logo" class="navbar-brand img-fluid ml-auto d-none d-md-flex float-left" src="http://www.agriappeals.gov.ie/media/agriappeals/styleassets/images/appeals_logo2.jpg" alt="Agriappeals Logo" style="max-height:100px;"></a>
+			<ul class="list-inline  justify-content-center mt-2">
+		<li class="list-inline-item float-sm-left float-md-right">
+		<button class="navbar-toggler navbar-toggler-right collapsed d-flex-inline d-lg-none mb-1 mt-md-4" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span>&nbsp; </span>
+            <span>&nbsp; </span>
+            <span>&nbsp; </span>
+		</button>
+		</li>
+		<li class="list-inline-item float-right">
+		<div class="input-group d-flex d-md-none">
+			<input class="form-control py-2" type="search" placeholder="search" id="example-search-input">
+			<span class="input-group-append">
+			<button class="btn btn-success border-left-0 border" type="button">
+          
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="pt-1" data-toggle="modal" data-target=".bd-example-modal-lg"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            
+			</button>
+			</span>
+		</div>
+		</li>
+		</ul>
+
+          </div>
+          <!-- <div class="col-4 text-center">
+            <a class="text-muted" href="#"></a>
+          </div> -->
+          <div class="col-lg-8  justify-content-end  d-none d-md-flex">
+
+		  <ul class="list-inline mt-3 ">
+		  <li class="list-inline-item nav-top hvr-underline-from-center"><a class="text-dark nav-link" href="#">Appeals</a></li>
+		  <li class="list-inline-item nav-top hvr-underline-from-center"><a class="text-dark nav-link" href="#">Reports</a></li>
+		  <li class="list-inline-item nav-top hvr-underline-from-center"><a class="text-dark nav-link" href="#">Find Us</a></li>
+		  <li class="list-inline-item ">
+		  <div class="input-group">
+      <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="example-search-input">
+      <span class="input-group-append">
+        <button class="btn btn-success border-left-0 border" type="button">
+           
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="pt-1"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            
+        </button>
+      </span>
+</div></li>
+		  			
+			
+			<li class="list-inline-item">
+            <div id="textSelector" class="d-none d-md-block">
+		<a id="normal" href="#" title="Regular Size Text" onclick="decreaseFontSizeBy1px()" tabindex="2">A</a>
+	<a id="larger" href="#" title="Larger Size Text" onclick="increaseFontSizeBy1px()" tabindex="3">A</a>
+	</div>
+	</li>
+	</ul>
+          </div>
+        </div>
+		
+	
+ </header>
+
+  
+<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade d-none d-lg-block shadow rounded" data-ride="carousel">
+  <div class="carousel-inner ">
+  <div class="container">
+
+                        <div class="carousel-caption">
+						<div class="" style="text-shadow: 2px 2px 4px #000000;">
+                           <h2 class="d-none d-sm-block animated jackInTheBox">Agriculture Appeals Office</h2>
+                            <h1 class="mb-5 animated jackInTheBox">Title of Page</h1>
+							
+							 <a class="mt-5" href="#" role="button">&nbsp;</a>
+                          </div>
+                        </div>
+                      </div>
+    <div class="carousel-item active" style="max-height:400px;">
+      <img class=" " src="https://www.laforestry.com/Portals/0/Images/banner_forest.jpg" alt="First background image for carousel slideshow">
+    </div>
+    <div class="carousel-item" style="max-height:400px;">
+      <img class="" src="http://www.wellnessretreatsindia.com/wp-content/uploads/2017/09/nature-banner-1.jpg" alt="Second background image for carousel slide show">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
+
+
+  <div class="row mt-1">
+  
+  <div class="col-lg-3 mt-3">
+
+ 
+	<nav class="navbar-dark navbar-expand-lg pt-lg-3 h-100" id="nav">
+                
+                 <div class="navbar-collapse collapse" id="navbarNav">
+<ul class="nav flex-column w-100 pr-2">
+<li class="nav-link hvr-underline-from-center"><a href="home.html">Home </a></li>
+<li class="nav-link hvr-underline-from-center"><span class="currentbranch0"><a href="#">About Us</a></span>
+<ul class="multilevel-linkul-0">
+<li><a href="https://sitemanager.dev.agriculture.gov.ie/sitemanager/preview/25/en/21373">Structure and Staff</a></li>
+<li><a href="https://sitemanager.dev.agriculture.gov.ie/sitemanager/preview/25/en/21374">Location</a></li>
+<li>Sample Cases</li>
+</ul> 
+</li>
+<li class="nav-link hvr-underline-from-center"><a href="#">Forestry Appeals Committee</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">Appeals Process</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">Publications</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">Statistics</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">FOI</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">FAQ</a></li>
+<li class="nav-link hvr-underline-from-center"><a href="#">Contact Us</a></li>
+</ul>
+          </div>
+		  </nav>
+		 </div>
+	
+
+ 
+  <br>
+   <div class="mainbody col-lg-9">
+ 
+
+<h1>About Us</h1>
+
+<p>Fáilte go suíomh gréasáin Oifig Achomhairc Talmhaíochta
+Fúinn
+Oifig neamhspleách is ea an Oifig Achomhairc Talmhaíochta a bunaíodh chun seirbhís achomhairc a sholáthar d’fheirmeoirí nach bhfuil sásta le cinntí na Roinne Talmhaíochta, Bia agus Mara maidir lena Scéimeanna sannta a oibríonn an Roinn. Leagtar síos san Acht um Achomhairc Talmhaíochta, 2001, mar aon leis na Rialacháin um Achomhairc Talmhaíochta, 2002, arna leasú, feidhmeanna an Stiúrthóra agus na nOifigeach Achomhairc, na cinntí a d’fhéadfaí a achomharc agus na nósanna imeachta atá le leanúint maidir le hachomhairc. </p>
+
+<p class="text-center">****************</p>
+<p>Welcome to the website of the Agriculture Appeals Office
+About Us
+The Agriculture Appeals Office is an independent office established in 2002 to provide an appeals service to farmers who are dissatisfied with decisions of the Department of Agriculture, Food and the Marine concerning designated Schemes operated by the Department. The Agriculture Appeals Act 2001, along with the Agriculture Appeals Regulations 2002, as amended, set down the functions of the Director and the Appeals Officers, the decisions that may be appealed and the procedures to be followed in respect of appeals.</p>
+
+
+
+	<br>
+
+	<br>
+
+	<div class="card-deck">
+  <div class="card shadow hvr-float-shadow"><a href="home.html" style="color: black;">
+    <img class="card-img-top" src="https://creativelyunited.org/wp-content/uploads/2018/02/forest-banner-2-1280.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Forestry Appeals Committee</h5>
+      <p class="card-text">For information on Forestry Appeals click here.</p></a>
+    </div>
+  </div>
+  <div class="card shadow hvr-buzz"><a href="annualreports.html" style="color: black;">
+    <img class="card-img-top" src="https://www2.illinois.gov/sites/statewide911/PublishingImages/CurrentFocus/AnnualReports.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Annual Reports</h5>
+      <p class="card-text">Click here to view Agriculture Appeals annual Reports.</p></a>
+    </div>
+  </div>
+  <div class="card shadow hvr-float-shadow"><a href="faq.html" style="color:black;">
+    <img class="card-img-top" src="https://www.greenthumb.co.uk/images/made/images/uploads/images/faq-action_360_200_50_s_c1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Frequently Asked Questions</h5>
+      <p class="card-text">Click here to view frequently asked questions.</p></a>
+    </div>
+  </div>
+</div>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	
+<!-- <div class="card-deck"> -->
+
+
+	<div class="card hvr-grow doormat shadow-lg">
+	  	<a href="#">
+  <img class="card-img" src="https://creativelyunited.org/wp-content/uploads/2018/02/forest-banner-2-1280.jpg" alt="Card image">
+  <div class="shade"></div>
+  <div class="card-img-overlay text-white">
+    <h5 class="card-title">Forestry Appeals</h5>
+    
+    <p class="card-text">Click Here for info</p>
+</div>
+</a>
+</div>
+
+	
+	
+	
+
+	<div class="card text-white hvr-grow doormat shadow-lg">
+		<a href="#">  
+  <img class="card-img " src="https://www2.illinois.gov/sites/statewide911/PublishingImages/CurrentFocus/AnnualReports.jpg" alt="Card image">
+  <div class="shade"></div>
+  <div class="card-img-overlay text-white">
+    <h5 class="card-title">Annual Reports</h5>
+    
+    <p class="card-text">Click Here for info</p>
+  </div>
+  </a>
+</div>
+
+	
+	
+	
+	
+	<div class="card text-white hvr-grow doormat shadow-lg">
+	  <a href="#">
+  <img class="card-img " src="https://www.greenthumb.co.uk/images/made/images/uploads/images/faq-action_360_200_50_s_c1.jpg" alt="Card image">
+  <div class="shade"></div>
+  <div class="card-img-overlay text-white">
+    <h5 class="card-title">FAQ</h5>
+    
+    <p class="card-text">Click Here for info</p>
+  </div>
+  </a>
+</div>
+
+	<!-- <div class="card text-white hvr-grow doormat"> -->
+	  <!-- <a href="#"> -->
+  <!-- <img class="card-img " src="faq.jpg" alt="Card image"> -->
+  <!-- <div class="shade"></div> -->
+  <!-- <div class="card-img-overlay text-white"> -->
+    <!-- <h5 class="card-title">FAQ</h5> -->
+    
+    <!-- <!-- <p class="card-text">Click Here for info</p> --> 
+  <!-- </div> -->
+  <!-- </a> -->
+<!-- </div> -->
+	<!-- <div class="card text-white hvr-grow doormat shadow"> -->
+	  <!-- <a href="#"> -->
+  <!-- <img class="card-img " src="faq.jpg" alt="Card image"> -->
+  <!-- <div class="shade"></div> -->
+  <!-- <div class="card-img-overlay text-white"> -->
+    <!-- <h5 class="card-title">FAQ</h5> -->
+    
+    <!-- <!-- <p class="card-text">Click Here for info</p> --> 
+  <!-- </div> -->
+  <!-- </a> -->
+<!-- </div> -->
+
+	
+	
+	<!-- </div> -->
+	
+	
+	<br>
+	<br></br></div>
+	<br>
+	<hr>
+	</div>
+	</div>
+	</div>
+
+
+	<footer class="footer  container rounded-bottom border border-top-0 mb-sm-3">
+		</br>			
+			<div class="row mx-auto">
+			<div class="col-md-4">
+			<ul class="mx-auto float-left list-unstyled address" style="color: white;">
+        <li><i class="fa fa-address-book"></i> <strong>Contact Us:</strong> <br/><p>Agriculture Appeals Office<br/>Kilminchy Court<br/>Portlaoise
+        <br>Laois<br>R32 DTW5</p></li>
+        <li><i class="fa fa-envelope"></i> Email: <a href="mailto:appeals@agriappeals.gov.ie">appeals@agriappeals.gov.ie</a></li>
+		    <li><i class="fa fa-phone"></i> Phone:  <a href="tel:076-1064418">076 1064418</a></li><br>
+			</ul>
+			</div>
+			
+			<div class="col-md-4 text-white">
+			<b class=""><i class="fa fa-assistive-listening-systems"></i> Listen or Translate</b><br><br>
+		<div class="mx-auto text-left">	
+    
+
+<p>We are pleased to provide Browsealoud on our website in order to make it more accessible with easy speech, reading and translation tools.</p>
+	  
+</div>
+</div>
+
+   
+   <div class="col-md-4">
+   <b class="text-white"><i class="fa fa-link"></i> Links</b><br><br>
+		<div class="mx-auto">	
+
+
+<ul class="mr-4 float-left list-unstyled ">
+	  <li class="list-item">
+	  <a href="#">Privacy</a></li>
+	  <li class="list-item">
+	  <a href="#">Disclaimer</a></li>
+	  <li class="list-item">
+	  <a href="#">Links</a></li>
+	  <li class="list-item">
+	  <a href="#">2015</a></li>
+</ul>
+	  
+	  <ul class=" list-unstyled">
+	  <li class="list-item">
+	  <a href="#">Sample Cases</a></li>
+	  <li class="list-item">
+	  <a href="#">Schemes</a></li>
+	  <li class="list-item">
+	  <a href="#">Procedures</a></li>
+	  <li class="list-item">
+	  <a href="#">Contact</a></li>
+	  </ul>
+	  
+</div>
+   </div>
+</div>   
+    </footer>
+		
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <!--  <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <!--  <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="ec_cookie.js"></script>
+   
+   
+   
+<script>
+$('.currentbranch0').closest('li').removeClass('hvr-underline-from-center').addClass('active-nav');
+
+   function decreaseFontSizeBy1px() {
+    txt = document.getElementById('html');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize - 1) + 'px';
+}
+function increaseFontSizeBy1px() {
+    txt = document.getElementById('html');
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + 1) + 'px';
+}
+</script>
+  
+  </body>
+</html>
